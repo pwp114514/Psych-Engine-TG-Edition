@@ -84,7 +84,7 @@ jobs:
           ios_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
 
       - name: Compile
-        run: haxelib run lime build ios -D officialBuild -D NO_PRECOMPILED_HEADERS -D mobileC -release
+        run: haxelib run lime build ios -D officialBuild -D NO_PRECOMPILED_HEADERS -D xcodebuild -release
         env:
           cert_pass: nullfunni
           cert_alias_pass: nullfunni
