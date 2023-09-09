@@ -24,21 +24,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@main
-
-      - name: Setup IOS NDK
-        uses: nttld/setup-ndk@main
-        id: setup-ndk
-        with:
-          ndk-version: r15c
-
+        
       - name: Setup Java JDK
         uses: actions/setup-java@main
         with:
           distribution: 'zulu'
           java-version: 11
-
-      - name: Setup IOS SDK
-        uses: ios-actions/setup-ios@main
 
       - name: Setup Haxe
         uses: krdlab/setup-haxe@master
